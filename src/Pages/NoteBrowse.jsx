@@ -1,4 +1,11 @@
+import NoteList from "Containers/NoteList";
+import TextCard from "components/TextCard";
+
 function NoteBrowse() {
-  return <>Note browse</>;
+  return (
+    <>
+      <NoteList />
+    </>
+  );
 }
 export default NoteBrowse;

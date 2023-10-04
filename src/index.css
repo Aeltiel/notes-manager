@@ -2,3 +2,6 @@ body{
   font-family: Roboto;
   background-color: #F8F9FB;
 }
+p{
+  font-size: 0.8em;
+}
