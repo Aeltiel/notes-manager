@@ -10,9 +10,8 @@ function NoteList() {
     <div className="row justify-content-center notesContainer">
       {noteList.map((note) => {
         return (
-          <div className="notesContainer__cards">
+          <div className="notesContainer__cards" key={note.id}>
             <TextCard
-              key={note.id}
               title={note.title}
               subtitle={note.created_at}
               content={note.content}
