@@ -1,10 +1,21 @@
+import { NoteAPI } from "api/note-api";
 import TextCard from "components/TextCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteNote } from "store/note/note-slice";
 
 function NoteList() {
   const noteList = useSelector((store) => store.NOTE.noteList);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function deleteNote_(note) {
+    //window.confirm renvoie true ou false. si c'est true on lance le code dans le if
+    if (window.confirm("Supprimer la note ?")) {
+      NoteAPI.deleteById(note.id);
+      dispatch(deleteNote(note));
+    }
+  }
 
   return (
     <div className="row justify-content-center notesContainer">
@@ -16,7 +27,7 @@ function NoteList() {
               subtitle={note.created_at}
               content={note.content}
               onClick={() => navigate("/note/" + note.id)}
-              onClickTrash={() => alert("click trash")}
+              onClickTrash={() => deleteNote_(note)}
             />
           </div>
         );

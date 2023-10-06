@@ -43,22 +43,10 @@
       "id": 11
     },
     {
-      "title": "test",
-      "content": "test content",
-      "created_at": "05/10/2023",
-      "id": 12
-    },
-    {
       "title": "Note hyper importante",
       "content": "Ceci est un note d'importance capitale pour la suite du cours",
       "created_at": "05/10/2023",
       "id": 13
-    },
-    {
-      "title": "test navigation",
-      "content": "teste pour check la navigation une fois la note crée",
-      "created_at": "05/10/2023",
-      "id": 14
     }
   ]
 }
